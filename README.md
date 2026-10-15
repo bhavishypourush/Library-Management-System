@@ -1,38 +1,82 @@
-# Library Management System
+# 📚 Library Management System
 
-A desktop-based Library Management System developed using Java Swing, JDBC, and MySQL. It provides separate interfaces for librarians and library members to manage books, borrowing, returns, and library transactions.
+A desktop-based Library Management System built using **Java Swing, JDBC, and MySQL**. It provides separate interfaces for librarians and members to manage books, borrowing, returns, and library transactions.
 
-## 1. Features
+## ✨ Features
 
 - Role-based login for Librarians and Members
-- Book search and availability tracking
+- Search books and check availability
 - Add, update, and delete book records
-- Book borrowing and returning
-- Borrowing history and transaction records
-- Member management
+- Borrow and return books
+- View borrowing history and transactions
+- Manage library members
 - Notifications and inventory reports
 - Multithreading demonstration
 
-## 2. Technology Stack
+## 🛠️ Technologies Used
 
-- **Programming Language:** Java
-- **User Interface:** Java Swing
+- **Language:** Java
+- **GUI:** Java Swing
 - **Database:** MySQL
-- **Database Connectivity:** JDBC
+- **Connectivity:** JDBC
 - **Build Tool:** Maven
 - **IDE:** IntelliJ IDEA
 
-## 3. Requirements
+## 📋 Requirements
 
-Before running the application, install:
+Install the following before running the project:
 
 - Java JDK compatible with the project
 - MySQL Server
-- MySQL Workbench (recommended for database setup)
+- MySQL Workbench (recommended)
 - IntelliJ IDEA or another Java IDE
-- Maven, if it is not managed by your IDE
+- Maven support
 
-## 4. Project Structure
+## 📥 Download the Project
+
+Clone the repository:
+
+```bash
+git clone https://github.com/bhavishypourush/Library-Management-System.git
+```
+
+Alternatively, click **Code → Download ZIP** on the GitHub repository page and extract the downloaded file.
+
+Open the extracted project folder in IntelliJ IDEA.
+
+## 🗄️ Database Setup
+
+1. Start MySQL Server.
+2. Open `src/main/resources/schema.sql` in MySQL Workbench.
+3. Execute the SQL script to create the database and required tables.
+4. Verify that the database and tables were created successfully.
+
+## ⚙️ Configure the Database Connection
+
+The connection settings are defined in `src/main/java/com/library/DB.java`.
+
+Configure the database URL, username, and password for your local MySQL installation. Use your own credentials; the application does not share your local database with other users.
+
+Do not put real passwords in source code or commit them to GitHub. Follow the database configuration in this README after setup.
+
+## ▶️ Run the Application
+
+1. Open the project in IntelliJ IDEA.
+2. Allow Maven to download the dependencies specified in `pom.xml`.
+3. Ensure MySQL is running and the database connection is configured.
+4. Open `src/main/java/com/library/Main.java`.
+5. Run `Main.java`.
+
+The application should open its login interface if the setup is correct.
+
+## 🧰 Troubleshooting
+
+- **Database connection fails:** Check that MySQL is running and the connection URL and credentials are correct.
+- **Tables are missing:** Execute `schema.sql` in MySQL Workbench.
+- **Maven dependencies are missing:** Reload the Maven project in IntelliJ IDEA.
+- **Application does not start:** Check the console for errors and verify that the configured Java version is compatible.
+
+## 📂 Project Structure
 
 ```text
 Library-Management-System/
@@ -43,10 +87,10 @@ Library-Management-System/
 │       │   ├── model/
 │       │   ├── service/
 │       │   ├── DB.java
-│       │   ├── Main.java
 │       │   ├── LoginFrame.java
 │       │   ├── LibrarianFrame.java
-│       │   └── MemberFrame.java
+│       │   ├── MemberFrame.java
+│       │   └── Main.java
 │       └── resources/
 │           └── schema.sql
 ├── .gitignore
@@ -54,42 +98,6 @@ Library-Management-System/
 └── README.md
 ```
 
-## 5. Setup Instructions
-
-### Step 1: Clone the repository
-
-```bash
-git clone https://github.com/bhavishypourush/Library-Management-System.git
-```
-
-Open the cloned folder in IntelliJ IDEA.
-
-### Step 2: Configure MySQL
-
-1. Start your MySQL server.
-2. Open `src/main/resources/schema.sql` in MySQL Workbench.
-3. Execute the script to create the required database and tables.
-
-### Step 3: Configure the database connection
-
-Open `DB.java` and configure the database URL, username, and password for your local MySQL installation.
-
-Do not commit real passwords or other secrets to GitHub.
-
-### Step 4: Load dependencies
-
-Open the project in IntelliJ IDEA and allow Maven to load the dependencies declared in `pom.xml`.
-
-### Step 5: Run the application
-
-Locate `Main.java` in the `com.library` package and run it after the database connection has been configured.
-
-## 6. Troubleshooting
-
-- **Database connection error:** Check that MySQL is running and the connection details are correct.
-- **Missing dependencies:** Reload the Maven project in IntelliJ IDEA.
-- **Missing tables:** Execute `schema.sql` and verify that the database was created successfully.
-
-## 7. Author
+## 👨‍💻 Author
 
 GitHub: [@bhavishypourush](https://github.com/bhavishypourush)
