@@ -1,0 +1,15 @@
+```gitignore
+# Maven build output
+target/
+
+# IntelliJ project-specific files
+.idea/
+*.iml
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+```
